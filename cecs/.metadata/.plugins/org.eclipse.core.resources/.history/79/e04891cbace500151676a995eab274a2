@@ -1,0 +1,16 @@
+
+public class BackOnTheChainGang {
+	public static void main(String args[]){
+		HashMap<String, Integer> wow= new HashMap<String, Integer>(1);
+		wow.insert("FIRST", 1);
+		wow.insert("SECOND", 6);
+		wow.insert("LEEDLE", 2);
+		wow.insert("LEEDLE", 3);
+		wow.insert("RANDOM", 5);
+		System.out.println("S"+ wow.keySet().toString());
+		System.out.println("2s"+wow.find("2ST"));
+		System.out.println("3s"+wow.containsKey("FI23T"));
+		wow.remove("HELLO");
+		System.out.println("Q"+ wow.keySet().toString());
+	}
+}

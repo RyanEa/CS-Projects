@@ -1,0 +1,44 @@
+﻿Build started 2/4/2015 10:50:57 PM.
+     1>Project "C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Lab2\Lab2\Lab2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Lab2.cpp
+         Lab2.cpp
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(3651): error C2228: left of '.min' must have class/struct/union
+                 type is 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(3617) : see reference to function template instantiation 'double std::uniform_real<_Ty>::_Eval<_Engine>(_Engine &,const std::uniform_real<_Ty>::param_type &) const' being compiled
+                 with
+                 [
+                     _Ty=double
+         ,            _Engine=int
+                 ]
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(3617) : see reference to function template instantiation 'double std::uniform_real<_Ty>::_Eval<_Engine>(_Engine &,const std::uniform_real<_Ty>::param_type &) const' being compiled
+                 with
+                 [
+                     _Ty=double
+         ,            _Engine=int
+                 ]
+                 c:\users\ryan\documents\visual studio 2013\projects\lab2\lab2\lab2.cpp(22) : see reference to function template instantiation 'double std::uniform_real<_Ty>::operator ()<int>(_Engine &) const' being compiled
+                 with
+                 [
+                     _Ty=double
+         ,            _Engine=int
+                 ]
+                 c:\users\ryan\documents\visual studio 2013\projects\lab2\lab2\lab2.cpp(22) : see reference to function template instantiation 'double std::uniform_real<_Ty>::operator ()<int>(_Engine &) const' being compiled
+                 with
+                 [
+                     _Ty=double
+         ,            _Engine=int
+                 ]
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(3651): error C2780: '_Rty std::_Nrand(_Engine &,long double,_Rty)' : expects 3 arguments - 2 provided
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(101) : see declaration of 'std::_Nrand'
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(3651): error C2780: '_Rty std::_Nrand(_Engine &,double,_Rty)' : expects 3 arguments - 2 provided
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(94) : see declaration of 'std::_Nrand'
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(3651): error C2780: '_Rty std::_Nrand(_Engine &,float,_Rty)' : expects 3 arguments - 2 provided
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(87) : see declaration of 'std::_Nrand'
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(3651): error C2780: '_Rty std::_Nrand(_Engine &,_Ety,_Rty)' : expects 3 arguments - 2 provided
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\random(79) : see declaration of 'std::_Nrand'
+     1>Done Building Project "C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Lab2\Lab2\Lab2.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.61

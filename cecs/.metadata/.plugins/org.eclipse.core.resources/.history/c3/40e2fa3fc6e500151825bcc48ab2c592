@@ -1,0 +1,118 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+// Implements the Map ADT using a hash table with separate chaining.
+public class HashMap<KeyType, ValueType> {
+   private class Node {
+      public KeyType mKey;
+      public ValueType mValue;
+      public Node mNext;
+      public void nodeSet(KeyType sKey,ValueType sValue){
+    	  mKey=sKey;
+    	  mValue=sValue;
+      }
+//      public KeyType getKey(){
+//    	  return mKey;
+//      }
+//      public ValueType getValue(){
+//    	  return mValue;
+//      }
+   }
+   
+   private Node[] mTable;
+   private int mCount;
+   
+   public HashMap(int tableSize) {
+      mTable = (Node[])Array.newInstance(Node.class, tableSize); 
+   }
+
+   public void insert(KeyType key, ValueType value) {
+	   int hk= key.hashCode()%mTable.length;
+	   hk=Math.abs(hk);
+	   Node temp= new Node();
+	   temp.nodeSet(key, value);
+	   Node traverse;
+	   if(mTable[hk] == null){
+		   mTable[hk] = temp; 
+		   mCount++;
+		   return;
+	   }
+	   else{
+		   traverse=mTable[hk];
+		   while(traverse.mNext!= null || traverse.mKey.equals(key)){
+		   if(traverse.mKey.equals(key)){
+			   System.out.println(traverse.mKey + " 2" + key);
+			   traverse.mValue=value;
+			   return;
+		   }
+		   traverse=traverse.mNext;
+	   }
+			   traverse.mNext=temp;
+			   mCount++;
+	   }
+   }
+
+   public ValueType find(KeyType key) throws keyNotFound {
+	   int hk= key.hashCode()%mTable.length;
+	   if(mTable[hk]==null){
+//		   return null;
+		   throw new keyNotFound();
+	   }
+	   Node iter=mTable[hk];
+	   while(iter.mNext!=null){
+	   if(iter.mKey.equals(key)){
+		   return iter.mValue;
+	   	}
+	   iter=iter.mNext;
+	   }
+      // Replace the following line after you write the find method.
+      throw new keyNotFound();
+   }
+   
+   // Removes the pair with the given key from the table.
+   public void remove(KeyType key) {
+	   int hk= key.hashCode() % mTable.length;
+	   if(mTable[hk] == null)
+		   return;
+	   if(mTable[hk].mKey.equals(key)){
+		   mTable[hk]=mTable[hk].mNext;
+		   return;
+	   }
+	   Node prev=mTable[hk];
+	   Node iter=mTable[hk];
+	   while(iter.mNext!=null || iter.mKey.equals(key)){
+		   if(iter.mKey.equals(key)){
+			   iter=iter.mNext;
+			   prev.mNext=iter;
+			   mCount--;
+			   return;
+		   }
+		   prev=iter;
+		   iter=iter.mNext;
+	   }
+   }
+   public boolean containsKey(KeyType key){
+	   if(find(key)!=null)
+		   return true;
+	   return false;
+   }
+   public ArrayList<KeyType> keySet(){
+	   ArrayList<KeyType> keysets=new ArrayList<KeyType>();
+	   for(int i=0; i<mTable.length; i++){
+		   Node iter=mTable[i];
+		   while(iter != null){
+//			   System.out.println(iter.mKey + " " + iter.mValue);
+			   keysets.add(iter.mKey);
+			   iter=iter.mNext;
+		   }
+	   }
+	   return keysets;
+   }
+   public static class keyNotFound extends Exception
+   {
+     public keyNotFound()
+     {
+       super("Key not found");
+     }
+   }
+}

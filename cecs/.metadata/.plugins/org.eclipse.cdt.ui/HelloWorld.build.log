@@ -1,0 +1,24 @@
+13:07:33 **** Incremental Build of configuration Debug for project HelloWorld ****
+make all 
+'Building file: ../src/ThePriceIsWrong.cpp'
+'Invoking: Cross G++ Compiler'
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -std=c++11 -MMD -MP -MF"src/ThePriceIsWrong.d" -MT"src/ThePriceIsWrong.d" -o "src/ThePriceIsWrong.o" "../src/ThePriceIsWrong.cpp"
+../src/ThePriceIsWrong.cpp: In function 'int main(int, char**)':
+../src/ThePriceIsWrong.cpp:9:4: error: 'uniform_distribution' was not declared in this scope
+    uniform_distribution<int> distr(1, 3);
+    ^
+../src/ThePriceIsWrong.cpp:9:25: error: expected primary-expression before 'int'
+    uniform_distribution<int> distr(1, 3);
+                         ^
+../src/ThePriceIsWrong.cpp:9:25: error: expected ';' before 'int'
+../src/ThePriceIsWrong.cpp:13:30: error: 'distr' was not declared in this scope
+    correctDoor = distr(engine);
+                              ^
+../src/ThePriceIsWrong.cpp:10:9: warning: unused variable 'switchDoor' [-Wunused-variable]
+    char switchDoor;
+         ^
+src/subdir.mk:21: recipe for target 'src/ThePriceIsWrong.o' failed
+make: *** [src/ThePriceIsWrong.o] Error 1
+
+13:07:33 Build Finished (took 642ms)
+

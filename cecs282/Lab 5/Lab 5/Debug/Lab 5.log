@@ -1,0 +1,16 @@
+﻿Build started 3/17/2015 11:10:54 AM.
+     1>Project "C:\Users\Ryan\documents\visual studio 2013\Projects\Lab 5\Lab 5\Lab 5.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Rational.cpp
+         Rational.cpp
+     1>c:\users\ryan\documents\visual studio 2013\projects\lab 5\lab 5\rational.cpp(137): warning C4101: 'value' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ryan\documents\visual studio 2013\Projects\Lab 5\Debug\Lab 5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Ryan\documents\visual studio 2013\Projects\Lab 5\Debug\Lab 5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Ryan\documents\visual studio 2013\Projects\Lab 5\Debug\Lab 5.lib" /MACHINE:X86 Debug\Lab5main.obj
+         Debug\Rational.obj
+         Debug\TestMain2.obj
+         Lab 5.vcxproj -> C:\Users\Ryan\documents\visual studio 2013\Projects\Lab 5\Debug\Lab 5.exe
+     1>Done Building Project "C:\Users\Ryan\documents\visual studio 2013\Projects\Lab 5\Lab 5\Lab 5.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.34

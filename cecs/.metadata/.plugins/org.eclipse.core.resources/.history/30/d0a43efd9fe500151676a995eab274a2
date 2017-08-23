@@ -1,0 +1,49 @@
+
+public class BackOnTheChainGang {
+	public static void main(String args[]){
+		HashMap<String, Integer> wow= new HashMap<String, Integer>(1);
+		wow.insert("FIRST", 1);
+		wow.insert("SECOND", 6);
+		wow.insert("LEEDLE", 2);
+		wow.insert("LEEDLE", 3);
+		wow.insert("RANDOM", 5);
+		System.out.println("S"+ wow.keySet().toString());
+		System.out.println("2s"+wow.find("2ST"));
+		System.out.println("3s"+wow.containsKey("FI23T"));
+		System.out.println("34"+null);
+		wow.remove("HELLO");
+		System.out.println("Q"+ wow.keySet().toString());
+	}
+}
+
+
+//int hk= key.hashCode()%mTable.length-1;
+//boolean deleted= false;
+//if(mTable[hk]==null){
+//	   System.out.println("Non-existent key value");
+//	   return;
+//}
+//Node prev=mTable[hk];
+//Node iter=mTable[hk];
+//if(iter.mNext.mKey == key){
+//	   mTable[hk]=mTable[hk].mNext;
+//	   mCount--;
+//	   System.out.println("DELETED");
+//	   return;
+//}
+//iter=iter.mNext;
+//while(iter.mNext != null && !deleted){
+//	   if(iter.mNext == null && iter.mKey.equals(key)){
+//		   prev.mNext=null;
+//		   mCount--;
+//		   return;
+//	   }
+//	   if(iter.mNext !=null && iter.mKey.equals(key)){
+//		   iter=iter.mNext;
+//		   prev.mNext=iter;
+//		   mCount--;
+//		   return;
+//	   }
+//	   iter=iter.mNext;
+//	   prev=prev.mNext;
+//}
